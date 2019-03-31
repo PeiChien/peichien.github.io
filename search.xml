@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Vultr配置]]></title>
+    <url>%2F2019%2F03%2F31%2FVultr%E9%85%8D%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[Vultr VPS 配置SSR1. 搭建 Shadowsocks 服务器端中文版： 1wget --no-check-certificate -O shadowsocks-libev_CN.sh https://raw.githubusercontent.com/uxh/shadowsocks_bash/master/shadowsocks-libev_CN.sh &amp;&amp; bash shadowsocks-libev_CN.sh 英文版：（如果中文版执行后出现乱码，那么请使用这个） 1wget --no-check-certificate -O shadowsocks-libev.sh https://raw.githubusercontent.com/uxh/shadowsocks_bash/master/shadowsocks-libev.sh &amp;&amp; bash shadowsocks-libev.sh 2. 安装 TCP 加速软件前面虽然已经搭建好了 SS，但是因为服务器位于国外，连接速度会较慢，所以我们非常必要在服务器上安装 TCP 加速软件来提速。一般大家常用的 TCP 加速软件有锐速和 Google BBR 拥塞控制算法。 注意：两者不能同时安装，大家根据自己的喜好选择其中一个安装即可！ 安装锐速请使用《CentOS6/7 专用破解版锐速一键安装脚本》进行（推荐这个） 安装 BBR 请按照《一键安装原版 &amp; 魔改版 Google BBR 拥塞控制算法教程》进行 附1.修改或卸载 Shadowsocks 配置运行下列命令，按照提示选择你所需要的操作： 中文版： 1bash shadowsocks-libev_CN.sh 英文版： 1bash shadowsocks-libev.sh CentOS6/7 专用破解版锐速一键安装脚本一、注意事项 安装锐速需降级系统内核，而安装 Google BBR 则需升级系统内核，故两者不能同时安装 安装锐速需降级系统内核，有可能造成系统不稳定，故不建议将其应用在重要的生产环境中 本教程只支持 CentOS6 x64 及 CentOS7 x64 系统，不支持任何 Debian &amp; Ubuntu 系统！ 二、判断系统类型1uname -r 系统内核版本主要分三种情况： 结果以 2 开头，例如 2.6.32-696.18.7.el6.x86_64，说明服务器为 CentOS6 x64 系统，查看第三步。 结果以 3 开头，例如 3.10.0-693.11.6.el7.x86_64，说明服务器为 CentOS7 x64 系统，查看第四步。 结果以 4开头，例如 4.12.10-1.el7.elrepo.x86_64，说明服务器已经安装 Google BBR 拥塞控制算法，无法安装锐速。 三、CentOS6 x64 系统安装锐速1wget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/0oVicero0/serverSpeeder_Install/master/appex.sh &amp;&amp; bash appex.sh install '2.6.32-642.el6.x86_64' 四、CentOS7 x64 系统安装锐速1wget --no-check-certificate -O rskernel.sh https://raw.githubusercontent.com/uxh/shadowsocks_bash/master/rskernel.sh &amp;&amp; bash rskernel.sh 回车后，等待内核更换完毕后系统会自动重启并断开连接，重新连接服务器，继续复制命令： 1yum install net-tools -y &amp;&amp; wget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/0oVicero0/serverSpeeder_Install/master/appex.sh &amp;&amp; bash appex.sh install 一直回车即可。]]></content>
+      <categories>
+        <category>科学上网</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2019%2F03%2F29%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
